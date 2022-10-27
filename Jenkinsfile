@@ -37,7 +37,7 @@ pipeline{
                 docker container stop yourcontainer
             docker container rm yourcontainer
             docker image build -t testimage:1.0 .
-            //docker run  --rm -d -p 80:8081 testimage:1.0
+            //docker run  --rm -d -p 80:8082 testimage:1.0
              docker run -d -p 80:8082 --name yourcontainer testimage:1.0
             '''
         }

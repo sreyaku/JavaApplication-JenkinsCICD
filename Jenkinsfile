@@ -4,7 +4,7 @@ pipeline{
         stage('gitclone'){
             agent any
             steps{
-                git credentialsId: 'bc010765-2802-482d-8502-5f629f70228a', url: 'https://github.com/sreyaku/JenkinsCICD.git'
+                git credentialsId: 'bc010765-2802-482d-8502-5f629f70228a', url: 'https://github.com/sreyaku/JavaApplication-JenkinsCICD.git'
             }
         }
         

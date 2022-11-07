@@ -13,7 +13,7 @@ pipeline{
             steps{
    
               sh '''
-               
+                 chmod 777 /var/run/docker.sock
                  docker container stop yourcontainer
                  docker container rm yourcontainer
                  docker image build -t testimage:1.0 .

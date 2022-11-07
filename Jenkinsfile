@@ -13,11 +13,11 @@ pipeline{
             steps{
    
               sh '''
-                sudo -S inapp@sreya# execute_command
-                sudo docker container stop yourcontainer
-                sudo docker container rm yourcontainer
-                sudo docker image build -t testimage:1.0 .
-                sudo docker run -d -p 80:8082 --name yourcontainer testimage:1.0
+                echo -e "YOURPASSWORD\n" 
+                sudo -S docker container stop yourcontainer
+                sudo -S docker container rm yourcontainer
+                sudo -S docker image build -t testimage:1.0 .
+                sudo  -S docker run -d -p 80:8082 --name yourcontainer testimage:1.0
             '''
         }
     }    

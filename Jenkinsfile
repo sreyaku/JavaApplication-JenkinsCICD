@@ -13,7 +13,7 @@ pipeline{
             steps{
    
               sh '''
-                 sudo -S "inapp@sreya#" chown root:docker /var/run/docker.sock
+                
                  docker container stop yourcontainer
                  docker container rm yourcontainer
                  docker image build -t testimage:1.0 .

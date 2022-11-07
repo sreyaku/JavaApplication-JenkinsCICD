@@ -13,9 +13,7 @@ pipeline{
             steps{
    
               sh '''
-                 sudo usermod -aG docker ${USER}
-                 su - ${USER}
-                 id -nG
+                 sudo chown root:docker /var/run/docker.sock
                  docker container stop yourcontainer
                  docker container rm yourcontainer
                  docker image build -t testimage:1.0 .
